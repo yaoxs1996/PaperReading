@@ -1,0 +1,4 @@
+时空数据挖掘：主要集中在时空数据表征、POI预测、推荐算法等。主要是利用时序模型和注意力机制等等
+Spatial-Temporal Data Mining
+
+Point of interesting
