@@ -61,3 +61,65 @@ __Neural network model__。我们提出了一个注意力网络结构能完全�
 
 ### 4.3 Parameter Learning
 
+给定时间T内的观测的事件列表$\mathcal{X}$（共N个事件），似然函数的对数形式被写作：  
+带多代表点的mixture model-based方法支持神经网络模型$f(\cdot)$。允许我们使用简单的后向传播算法。训练阶段，采用mini-batch优化。
+
+### 4.4 Prediction
+
+未来事件预测的过程。  
+将测试时期$\mathbb{T}^*=(T,T+\Delta T]$的多代表点表示为$\mathcal{U}^*=\{(\tau,r)|T<\tau \leq T+\Delta T\} \subset \mathcal{U}$。  
+给定神经网络习得的参数$\hat{\theta}$，为每个代表点计算$f(u_j,z_j;\hat{\theta})$。  
+使用估计函数$\{f(u_j,z_j;\hat{\theta})\}_{u_j \in \mathcal{U}^*}$集合，估计核参数$\hat{\sum}$，获得基于等式(4)的测试时段的强度$\hat{\lambda}(x)$。  
+给定测试时段$\mathbb{T}^*$的观测事件序列$\mathcal{D}=\{x_{N+1},...,x_{N+n}\}$，测试数据的对数似然被计算为：
+
+$$\tag{8} \mathcal{L}^*=\log{p(\mathcal{D}|\hat{\lambda}(x))}$$
+
+点处理模型可以用于预测期望的事件数目。事件数目源于特定时间段和兴趣区域。
+
+## 5 EXPERIMENTS
+
+### 5.1 Data Sets
+
+#### 5.1.1 Event data
+
+* __NYC Collision Data__
+* __Chicago Crime Data__
+* __NYC Taxi Data__
+
+#### 5.1.2 Urban contextual data
+
+* __Map Image__
+* __Social/Traffic Event Description__
+
+### 5.2 Experimental Setup
+
+参数设置相关
+
+### 5.3 Evaluation Metrics
+
+预测表现度量：Log-Like（预测性对数似然）和MAPE（平均绝对百分比误差）。
+
+### 5.4 Comparison Methods
+
+* HP（齐次泊松过程）
+* LGCP（Log Gaussian Cox process）
+* RMTPP（Recurrent Marked Temporal Point Process）
+
+DMPP变体：
+
+* DMPP Naive：没有包含任何上下文特征
+* DMPP Image/Text：包含地图图像或者社会/交通描述
+
+### 5.5 Quantitative results
+
+#### 5.5.1 Sensitivity study
+
+* 代表点的数量
+* 核函数的选择
+* 地图样式的选择
+* 网络结构
+
+### 5.6 Qualitative results
+
+## 6 CONCLUSION AND FUTURE WORK
+
