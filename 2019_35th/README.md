@@ -51,3 +51,23 @@ HW在天级预测有最好表现。
 
 Adaptive neuro fuzzy inference system（ANFIS）结合了模糊逻辑和神经网络。  
 文中的三个场景下，ANFIS均优于ARIMA，但是代价是过高的计算复杂度，只适合算力充足的场景下。
+
+## A novel hybridization of echo state networks and multiplicative seasonal ARIMA model for mobile communication traffic series forecasting(2014)
+
+时间序列预测模型被分为单模型和组合模型。单模型不足以捕获复杂时间序列的全部特征。经典线性模型被广泛使用，诸如AR、ARMA和ARIMA，针对非线性时间序列，SVM更有效。  
+因为高精确度和良好的泛化能力，SVM可以用于时间序列预测，但是SVM难以在不同应用中选择核函数。  
+ANNs拥有灵活的非线性映射能力，可以以任意期望的精度近似任意连续可测量函数，但是慢收敛和高计算训练代价，ANNs在实践中难以应用。  
+Echo state network（ESNs）是ANN的一个新结构。不同于传统的ANN方法，ESN中，只有从动态储层到输出神经元的连接需要被训练，因此训练ESNs成为一个线性回归任务，解决了ANNs的收敛慢和次优解的问题。  
+本文提出基于ESNs和乘法周期ARIMA模型的小波多分辨率分析（MRA）预测模型。将时间序列分解成平滑部分和周期部分，再使用适当的模型分别单独进行预测。
+
+## Computer network traffic prediction: a comparion between traditional and deep learning neural networks
+
+就计算机网络流量预测，比较4种人工神经网络：
+
+* 多层感知机（MLP），使用反向传播作为训练算法
+* Rprop MLP
+* RNN
+* 深度学习栈式自动编码器（SAE）
+
+对于网络流量预测，MLP和RNN优于SAE。SAE深度神经网络训练时的计算复杂度更高。  
+最佳预测方法应该是RNN。最佳精度和计算时间由JNN获得，一种SRN。带Rprop的RNN在短期和实时预测最好。  
