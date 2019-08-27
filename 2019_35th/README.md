@@ -36,3 +36,18 @@ RNN及RNN的变体：LSTM、GRU。理论上可以以任意精度接近非线性�
 
 ## ZipNet-GAN: Inferring Fine-grained Mobile Traffic Pattern via a Generative Adversarial Neural Network
 
+## Multiscale Internet traffic forecasting using neural network and time series methods(2012)
+
+在五分钟级和小时级，ARIMA和NNE（neural network ensemble）产生更小的误差。  
+ARIMA不适合在线预测系统，因为对算力需求太高。  
+NNE的搜索空间很高，但是启发式方法显著降低计算负担，且易于实现。NNE可以被用于实时预测。  
+HW在天级预测有最好表现。
+
+## Comparetive evaluation of ARIMA and ANFIS for modeling of wireless network traffic time series(2014)
+
+* 统计/回归模型：AR、ARMA、GARMA、ARIMA、FARIMA
+* 分数高斯噪音和分数布朗运动：在长期依赖数据上，比回归模型有更好的精确度
+* 人工神经网络和逻辑模糊方法
+
+Adaptive neuro fuzzy inference system（ANFIS）结合了模糊逻辑和神经网络。  
+文中的三个场景下，ANFIS均优于ARIMA，但是代价是过高的计算复杂度，只适合算力充足的场景下。
